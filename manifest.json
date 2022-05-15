@@ -1,0 +1,16 @@
+{
+
+  "manifest_version": 2,
+  "name": "YouTube Watch Page Fix",
+  "version": "1.0.0",
+
+  "description": "Removes some of the changes to the youtube watch page that were implemented on May 9, 2022.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["youtube-watch-page-fix.js"]
+    }
+  ]
+
+}
