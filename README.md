@@ -1,2 +1,2 @@
 # youtube-watch-page-fix
-Restores the old YouTube watch page
+A CSS stylesheet that removes some of the changes to the YouTube watch page that were implemented on May 9, 2022. It currently uses a temporary method to fully restore the old layout, but will continue to partially work even after this method is removed because of the other fixes included. It is availible as a Firefox extension. For non-Firefox users (or Firefox users who prefer), it is also availible as a userstyle on userstyles.world, and a userscript on greasyfork.org.
