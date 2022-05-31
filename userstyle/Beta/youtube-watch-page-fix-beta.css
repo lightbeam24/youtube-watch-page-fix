@@ -1,0 +1,153 @@
+/* ==UserStyle==
+@name           Youtube Watch Page Fix Beta
+@namespace      youtube.com
+@version        1.0
+@description    Removes the recent changes to YouTube's watch page
+@author         lightbeam
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+/* Temporary fixes. (Legacy) *//*
+ytd-watch-metadata { 
+  display: none !important;
+}
+#meta-contents[hidden], #info-contents[hidden] { 
+  display: block !important;
+}*/
+
+
+/* Permanent fixes */
+/* Removes second comment section, */
+#comment-teaser.ytd-watch-metadata {
+display: none;
+}
+/* Removes border around creator's name and sub button. NOTE: This part doesn't work as of 1.1, but keeping it for now just in case. */
+#owner.ytd-watch-metadata {
+border: none; 
+}
+/* Removes border around creator's name and sub button. */
+ytd-watch-metadata:not([modern-metapanel]) #owner.ytd-watch-metadata {
+border: none;
+}
+/* Reverts the video title font. */
+ytd-watch-metadata[smaller-yt-sans-light-title] h1.ytd-watch-metadata {
+  font-family: "Roboto",sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+ytd-video-primary-info-renderer[use-yt-sans20-light] .title.ytd-video-primary-info-renderer {
+  font-family: "Roboto",sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+/* Removes the bold letters on upload date and view count. (Legacy) */ /*
+.yt-formatted-string[style-target="bold"] {
+  font-weight: 400;
+}*/
+/* Width */
+ytd-watch-flexy[flexy][is-two-columns_][is-extra-wide-video_] #primary.ytd-watch-flexy, ytd-watch-flexy[flexy][is-two-columns_][is-four-three-to-sixteen-nine-video_] #primary.ytd-watch-flexy {
+  max-width: none;
+  min-width: none;
+  width: 100% !important;
+}
+/* Width for channel */
+#owner-and-teaser.ytd-watch-metadata {
+  position: absolute;
+  width: 104rem;
+  margin-top: -12rem !important;
+  border-top: 1px solid lightgrey;
+}
+/* POS Desc and all */
+ytd-watch-metadata[top-aligned-actions] #description.ytd-watch-metadata {
+  margin-top: 9rem;
+}
+@media screen and (min-width: 1600px) {
+#owner-and-teaser.ytd-watch-metadata {
+  position: absolute;
+  width: 128rem;
+  margin-top: -12rem;
+  border-top: 1px solid lightgrey;
+}
+}
+@media screen and (max-width: 1700px) {
+#owner-and-teaser.ytd-watch-metadata {
+  position: absolute;
+  width: 104rem;
+  margin-top: -12rem;
+  border-top: 1px solid lightgrey;
+}
+}
+@media screen and (max-width: 1500px) {
+#owner-and-teaser.ytd-watch-metadata {
+  position: absolute;
+  width: 94rem;
+  margin-top: -12rem;
+  border-top: 1px solid lightgrey;
+}
+}
+@media screen and (max-width: 1300px) {
+#owner-and-teaser.ytd-watch-metadata {
+  position: absolute;
+  width: 80rem;
+  margin-top: -12rem;
+  border-top: 1px solid lightgrey;
+}
+ytd-watch-metadata[description-collapsed]:not([top-aligned-actions]):not([flex-menu-enabled]) #actions.ytd-watch-metadata, ytd-watch-metadata[top-aligned-actions]:not([flex-menu-enabled]) #actions.ytd-watch-metadata {
+  flex: auto;
+  margin-top: -0.3rem !important;
+}
+    /* POS Desc and all */
+ytd-watch-metadata[top-aligned-actions] #description.ytd-watch-metadata {
+  margin-top: 10rem;
+}
+}
+@media screen and (max-width: 1200px) {
+#owner-and-teaser.ytd-watch-metadata {
+  position: absolute;
+  width: 70rem;
+  margin-top: -12rem;
+  border-top: 1px solid lightgrey;
+}
+}
+@media screen and (max-width: 1100px) {
+#owner-and-teaser.ytd-watch-metadata {
+  position: absolute;
+  width: 66rem;
+  margin-top: -12rem;
+  border-top: 1px solid lightgrey;
+}
+}
+@media screen and (max-width: 1000px) {
+#owner-and-teaser.ytd-watch-metadata {
+  position: absolute;
+  width: 84rem;
+  margin-top: -12rem;
+  border-top: 1px solid lightgrey;
+}
+}
+    /* actions */
+ytd-watch-metadata[top-aligned-actions]:not([description-collapsed]) #description.ytd-watch-metadata {
+  min-width: 100%;
+  min-width: min(105rem,100%);
+  background: var( --yt-spec-general-background-a );
+  z-index: 1000;
+  padding-top: 2rem;
+}
+ytd-watch-metadata[description-collapsed]:not([top-aligned-actions]):not([flex-menu-enabled]) #actions.ytd-watch-metadata, ytd-watch-metadata[top-aligned-actions]:not([flex-menu-enabled]) #actions.ytd-watch-metadata {
+  flex: auto;
+  margin-top: -2.7rem;
+}
+ytd-watch-metadata:not([top-aligned-actions]) #description.ytd-watch-metadata, ytd-watch-metadata[top-aligned-actions] #description.ytd-watch-metadata ytd-text-inline-expander.ytd-watch-metadata {
+  max-width: none;
+}
+ytd-watch-metadata:not([flex-menu-enabled]) #description-and-actions.ytd-watch-metadata {
+  flex-wrap: nowrap;
+}
+ytd-watch-metadata[description-collapsed]:not([top-aligned-actions]):not([flex-menu-enabled]) #actions.ytd-watch-metadata, ytd-watch-metadata[top-aligned-actions]:not([flex-menu-enabled]) #actions.ytd-watch-metadata {
+  flex: auto;
+}
+ytd-watch-metadata[description-collapsed] #description-and-actions.ytd-watch-metadata, ytd-watch-metadata[modern-metapanel] #description-and-actions.ytd-watch-metadata, ytd-watch-metadata[top-aligned-actions] #description-and-actions.ytd-watch-metadata {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 2rem;
+}
+}
