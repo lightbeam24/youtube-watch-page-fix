@@ -1,7 +1,9 @@
 # youtube-watch-page-fix
 
 This is now discontinued. It still *sort of* works, but the method it uses could stop working any day now. I made CustomTube, a Firefox extension that does what this script did, and so much more.
+
 Install here: https://addons.mozilla.org/en-CA/firefox/addon/customtube/
+
 Github: https://github.com/lightbeam24/customtube
 
 ----
